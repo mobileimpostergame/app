@@ -5,7 +5,7 @@ const GROQ_MODEL = "llama-3.1-8b-instant";
 
 const STORAGE_KEY = "the-imposter-game-settings-v1";
 const RECENT_WORDS_KEY = "the-imposter-game-recent-words-v1";
-const MIN_PLAYERS = 3;
+const MIN_PLAYERS = 1;
 const MAX_PLAYERS = 100;
 const GROQ_REQUEST_TIMEOUT_MS = 12000;
 
@@ -19,13 +19,13 @@ const SYSTEM_PROMPT = [
   "Do not use categories like Historical Event, Scientist, Classical Musician, Philosophy, Ancient History, War, Literature, Chemistry, Physics, or Biology.",
   "Secret word must be common, modern, instantly understandable, and easy to talk about without specialist knowledge.",
   "Avoid obscure people, old classical figures, dates, technical terms, and school-test answers.",
-  "Imposter clue must be a single word or very short phrase related to the secret word.",
-  "The clue must be subtle, natural, believable, and slightly misleading.",
+  "Imposter clue must be a single word related to the secret word.",
+  "The clue must be subtle, natural, believable, and slightly misleading to make other people think they aren't imposter.",
   "The clue must not be the secret word, a synonym that gives it away, lazy, generic, or NPC basic.",
   "Keep all values concise. Proper nouns are allowed only if most people would know them."
 ].join(" ");
 
-const defaultPlayers = ["Mason", "Ben", "Ethan", "Jake"].map((name) => ({
+const defaultPlayers = ["Player 1", "Player 2", "Player 3, "Player 4"].map((name) => ({
   id: createId(),
   name
 }));
