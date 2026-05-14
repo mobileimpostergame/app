@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <radialGradient id="bgGlow" cx="30%" cy="20%" r="80%">
+      <stop offset="0%" stop-color="#1bb9ff"/>
+      <stop offset="42%" stop-color="#622bff"/>
+      <stop offset="76%" stop-color="#7a1c9d"/>
+      <stop offset="100%" stop-color="#07081d"/>
+    </radialGradient>
+    <radialGradient id="hotGlow" cx="50%" cy="55%" r="52%">
+      <stop offset="0%" stop-color="#ff4b57" stop-opacity="0.72"/>
+      <stop offset="62%" stop-color="#a321ff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#07081d" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="ring" x1="190" y1="120" x2="820" y2="900">
+      <stop stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="0.45" stop-color="#85e9ff" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#d45cff" stop-opacity="0.86"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="226" fill="#07081d"/>
+  <rect x="34" y="34" width="956" height="956" rx="206" fill="url(#bgGlow)"/>
+  <circle cx="512" cy="540" r="390" fill="url(#hotGlow)"/>
+  <circle cx="512" cy="512" r="294" fill="none" stroke="url(#ring)" stroke-width="34" opacity="0.88"/>
+  <g filter="url(#softGlow)">
+    <circle cx="370" cy="386" r="72" fill="#ffffff"/>
+    <circle cx="654" cy="386" r="72" fill="#ffffff"/>
+    <circle cx="512" cy="654" r="88" fill="#ff4b57"/>
+  </g>
+  <path d="M314 742c46-86 119-129 198-129s152 43 198 129" fill="none" stroke="#ffffff" stroke-width="44" stroke-linecap="round" opacity="0.86"/>
+  <path d="M404 286 512 154l108 132" fill="none" stroke="#ffffff" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" opacity="0.34"/>
+</svg>
