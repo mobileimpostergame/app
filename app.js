@@ -5,7 +5,7 @@ const GROQ_MODEL = "llama-3.1-8b-instant";
 
 const STORAGE_KEY = "the-imposter-game-settings-v1";
 const RECENT_WORDS_KEY = "the-imposter-game-recent-words-v1";
-const MIN_PLAYERS = 3;
+const MIN_PLAYERS = 0;
 const MAX_PLAYERS = 100;
 const GROQ_REQUEST_TIMEOUT_MS = 12000;
 
@@ -21,7 +21,7 @@ const SYSTEM_PROMPT = [
   "Keep all values concise. No proper nouns unless the category makes that natural."
 ].join(" ");
 
-const defaultPlayers = ["Mason", "Ben", "Ethan", "Jake"].map((name) => ({
+const defaultPlayers = ["Player 1", "Player 2", "Player 3", "Player 4"].map((name) => ({
   id: createId(),
   name
 }));
